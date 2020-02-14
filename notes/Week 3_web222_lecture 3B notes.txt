@@ -1,0 +1,154 @@
+array literal
+====================
+https://api.myjson.com/bins/mt6xe
+1000 strings
+command A
+
+for(let i = 0; i < addresses.length; i++){
+	console.log(addresses[i]);
+}
+
+OR
+
+addresses.forEach(function(address) { console.log(address); })
+
+[1000].forEach(function(address) { console.log(address); })
+//array literal - one variable 1000
+
+cursor up
+
+//now write in cursor arrow
+addresses.forEach((address) => console.log(address))
+
+
+//pass in just function or variable that holds function console.log
+addresses.forEach(console.log)
+
+f log() { [native code] }
+let f = console.log
+
+let s = "Hello World";
+let b = s; //refer to same thing
+
+addresses.forEach(f)
+
+METHOD 1:
+let emailAddress = "gmcalister1v@amazon.com";
+" ".indexOf('@')
+//slice
+emailAddress.slice(emailAddress.indexOf('@') + 1)
+
+METHOD 2:
+emailAddress.split('@')[1]
+
+
+PROBLEM 2: METHOD 1 - find only the domains -> duplicates in here
+==================================
+addresses.map(function(address) {
+	return address.split('@')[1]
+})
+	
+	//call function 1000 times on addresses
+	
+let domains = addresses.map(function(address) { return address.split('@')[1] })
+
+PROBLEM 2B: METHOD 2 - "Filter" out twitter.com -> TRUE, else FALSE
+=================================
+domains.filter(function(domain) { return (domain === 'twitter.com') })
+
+
+PROBLEM 3: PUTTING IT ALL TOGETHER countDOMAINS
+adddress -> map domain -> 
+=======================================
+function countDomains(searchDomain){
+	return addresses.map(address =>address.split('@')[1]).filter(domains => domain === searchDomain).length;
+}
+
+
+
+function countDomains(searchDomain){
+	return addresses
+		.map(function(address).split('@')[1]
+		})
+		.filter(function(domain){
+			return (domain === searchDomain);
+		})
+		.length;
+}
+
+
+function countDomains(searchDomain){
+	return addresses.map(address => address.split('@')[1]).filter(domain => domain ===
+
+//===============NO DUPES
+new Set(domains)
+
+
+
+MULTIPLE WAYS OBJECT
+=====================
+let list = "..." literal
+
+
+// - caus its comment
+/./ - pattern (regex)
+
+call methods on its
+
+/./.test('hello') - white space, numbers, letters, anything
+
+/abc/.test('abc')
+
+/[abc]/.test('a') - ma
+/[a-zA-Z]/ - lower or upper case
+/[a-z]/i - ignore case
+
+/[0-9]/   OR \d
+
+\D -> not digit (Capital is inverted)
+
+/\d\../i  digit +"."+ any character
+
+POSTCODE - REGEX
+========================================
+/[A-Z]\d[A-Z] \d[A-Z]\d/i.test('M5W 1E6')   
+/[A-Z]\d[A-Z] ?\d[A-Z]\d/i.test('M5W 1E6')  
+
+/\d\d\d-?\d\d\d-?\d\d\d\d/.test(416-491-5050]
+
+* 0 or more
++ 1 or more
+{3}
+{3, 5}
+
+/\(\?d{3}\)[ -]?\d{3}-\d{4}
+
+\( - literal (
+
+'+305 (416) 491-5050
+
+country code
+=====================
+/    \+\d{1,3} 
+
+ (\+\d{1,3})?\(\?d{3}\)[ -]?\d{3}[ -]?\d{4}
+ 
+ 
+PROBLEM - 
+file.jpg
+file.jpeg
+file.png
+file.gif
+
+/.\..  - cheating
+https://www.regexpal.com/
+Ans:
+/^[^.]+\.(jpg|jpeg|png|gif)$/gm
+group
+
+
+
+https://jex.im/regulex/#!flags=&re=%5E(a%7Cb)*%3F%24
+
+https://regexr.com/
+

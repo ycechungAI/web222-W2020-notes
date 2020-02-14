@@ -1,0 +1,155 @@
+function hello(){
+
+    return "Hello World";
+}
+
+hello();
+
+//     anonymous function, lambda
+var hello = function (){
+    return "Hello world";
+};
+hello();
+
+
+// 3rd way of javascript functions
+var hello = () => "Hello world";
+
+var add = function(a, b){
+    return a + b;
+}
+
+//arrow function
+var hello = (n) => n * n;
+var add = (a, b) => a + b; //expression - fat arrow
+
+var complex = (a, b, c) => {
+    doFIrstThing();
+    doSecondThing();
+};
+
+//OTHER EXAMPLES //functions' signature
+var total add[1, 2];
+//---------- VERSION 1 ---------------------
+//function's signature, function overloading
+function add(){
+    //arguments
+    var total = 0;
+    for(var i = 0; i < arguments.length; i++)
+    {
+        total += arguments[i];
+    }
+    return total;
+}
+//----------- VERSION 2 ---------------------
+//function's signature, function overloading
+function add(...numbers){ //... take all of arguments as array
+    //arguments, ...numbers (rest param)
+    var total = 0;
+    for(var i = 0; i < numbers.length; i++)
+    {
+        total += numbers[i];
+    }
+    return total;
+}
+
+//----------- PASS TOO LITTLE PARAMETERS ------------
+function doSomething(a, b){
+    if (b){
+        // do something including b   
+    }else{
+        // do something include b
+    }
+}
+//-----V2--------------------
+function doSomething(a, b){
+// NOT: undefined, null, 0
+    if (!b) {
+        //Is one of undefined, null or zero   
+    }
+    return b ? doSomethingWithB() : doSomethingWithoutB();
+}
+//-----V3-------------------------
+function doSOmething(a, b=1){ //default value b=1
+    //b = b || 1;
+    return a + b;
+}
+doSomething[3]; //4
+doSomething(3,4); // 7
+
+//function doSOmething(a,b){
+    if(b){
+        b = b;
+    }else{
+        b = 1;
+    }
+    b = b || 1
+
+    
+}
+//---------V4----------------
+function add(a,b) { return a + b }
+undefined
+add(3)
+NaN - not a number
+C crashed
+// --------V5 ----------------
+//function doSOmething(a,b){
+    if(b){
+        b = b;
+    }else{
+        b = 1;
+    }
+    b = b || 0
+}
+//----------V6 CORRECT ------------
+function doSomething(a,b) {
+    if(!b){
+        throw new Error('missing value b');
+    }
+    return a + b;
+}
+//----------V7.1 INCORRECT ------------
+function doSomething(a,b) {
+    if(!b){
+        return console.log('missing value b'); //undefined
+    }
+    return a + b; 
+}
+//----------V7.2 INCORRECT------------
+function doSomething(a,b) {
+    if(!b){
+        return console.log('missing value b'); //undefined
+        return 0
+    } else {
+        return a + b;
+    }
+}
+//Sential value -1 but in this case is 0 - but zero is possible
+doSomething(3); //0
+doSomething(-1, 1); //0
+//----------V8 INCORRECT------------
+function doSomething(a,b) {
+    if(!b){
+        return console.log('missing value b'); //undefined
+        return false //doesnt work - deny enivatble
+    } else {
+        return a + b;
+    }
+}
+//cant trust the - you need to throw new error
+//Sential value -1 but in this case is 0 - but zero is possible
+var total = doSomething(3); //0
+var toatl2 = doSomething(-1, 1); //0
+
+// ------ exp
+!!undefined // indend to put nothing
+!!null // never done anything - memory is undefined
+
+both equal false
+!!0 - > false
+
+//if(p*) - check for null pointer
+doSOmething(3, undefined); //=== doSOmething(3);
+var g = f; // get the function object in f assign to g
+g === f; //true

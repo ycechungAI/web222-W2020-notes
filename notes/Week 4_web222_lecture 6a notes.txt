@@ -1,0 +1,164 @@
+Text Fragments
+================= WEEK 6 ==================================
+example.com#:~:text=[prefix=.]textStart[,textEnd][,-suffix]
+    context |-------match-------|   context
+	
+	
+	#devsheets by @stefanjudis
+
+URL is standardized
+
+w3c.url.spec
+-=======================-
+URL Standard - Nov 20th, 2019
+
+
+
+Deep Links
+
+
+///////////////////////////////////////////////////////////
+
+Block vs. Inline Elemen
+<body>
+   <p>The <em>cow</em> jumped over the <b> moon </b>.</p>
+</body>
+
+wraps around - broken space => block level element
+
+
+<ol>
+	<li><a href="URLsome"> Block-level elements: create </a> 
+
+</ol>
+
+set off own space - above and below or break
+
+a - inline element doesnt breakt the flow
+lo, p, 
+
+
+DEFINITION
+element, tag, entity (escape these charactets)
+
+Body
+
+<code> is an inline element
+
+<code>&lt;body&gt;</code>
+
+
+<br> - line brea
+<break>
+<meta>
+<img src=""> - in line
+
+
+
+
+
+
+
+<nav>
+=======================
+<header>
+TItle, serach
+logo
+signin
+
+
+<footer>
+Authors, copyrights,
+address, links, social media, Date
+
+
+
+<div> <span>
+
+
+<table>
+  <tbody>
+    <tr>
+	   <td colspan=""3>1</td>
+	</tr>
+	<tr>
+	  <td>2</td>
+	  <td>2</td>
+	  
+	  
+	</tr>
+	  <td>
+	    <table>
+		  <tr>
+		    <td>a</td>
+			<td>b</td>
+		  </tr>
+		  <tr>
+		    <td>c</td>
+			<td>d</td>
+		  </tr>
+		</table>
+	  </td>
+	<tr>
+	  <td colspan="2">5</td>
+	</tr>
+	<tr>
+	  <td>6</td>
+	  <td>7</td>
+	  <td>8</td>
+	</tr>
+  <tbody>
+  
+ 
+</table>
+
+
+/////////////////IMG
+<img src="" alt="">
+
+////ALternative text -> "Picture of a cat"
+////title=""; //hover over the title
+
+<img height="400" img="">
+
+////////////////AUDIO
+
+<h1>Playing with Audio</h1>
+<audio src="" controls></audio>
+
+COdePen ->
+
+
+
+//////////////////////////////////
+//SCRIPTS
+/////////////////////////////////
+<!-- Inline Javascript (avoid this) -->
+<script>
+    console.log(`Hello world`);
+
+</script>
+
+<!-- Keep them separate -->
+
+<script src="file.js"></script>
+
+
+/////////////////////////////////
+//WEBASSEMBLY - c++, python, to imaginary 
+////////////////////////////////
+
+
+<script src="file.js"></script>
+<script src="file2.js"></script>
+
+<script>
+(function(){
+
+	var x = 7;
+	window.f = function (){
+	 return x;
+	]
+}())
+console.log(x);
+</script>

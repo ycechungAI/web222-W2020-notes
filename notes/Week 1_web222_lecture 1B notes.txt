@@ -1,0 +1,79 @@
+1.	TODO
+2.	=======================
+3.	Install Browsers
+4.	Install Node JS
+5.	1. Visual Code
+6.	2. Terminal
+7.	3. Browsers
+8.	 
+9.	https://bellard.org
+10.	 
+11.	 
+12.	Open the project not just one file
+13.	 
+14.	F3 - find stuff
+15.	 
+16.	Mkdir -p javascript
+17.	 
+18.	VS Code - Open File
+19.	 
+20.	node index.js
+21.	 
+22.	Redmond - popular programming languages
+23.	From 2012
+24.	 
+25.	Typescript also javascript
+26.	Compiles to javascript
+27.	 
+28.	Runtime on VM for js runtime
+29.	 
+30.	 
+31.	Web Assembly
+32.	WASM
+33.	 
+34.	AutoCAD & WebAssembly
+35.	 
+36.	Different - functional programming
+37.	 
+38.	ES - standard - no one owns javascript
+39.	European Computer Manufacturers
+40.	ES2019
+41.	 
+42.	- Implement a version
+43.	 
+44.	V8 - Chrome, NodeJS (raw js engine)
+45.	ES5 - 2015 - standard
+46.	 
+47.	 
+48.	https://developer.mozilla.org/en-US/
+
+
+100-199 – Information
+200-299 – Success
+300-399 – redirect
+400-499 – Client error
+500-599 – Server error
+
+C/C++/Java
+-	static types
+-	compile Time Language
+JS
+-	dynamic types
+-	Runtime Language
+-	Don’t know until util runtime
+
+
+Var x = “7”
+X|0
+7
+parseInt(x, 10)
+7
+
+3.14|0
+3
+
+Var greet = console.log
+Undefined
+Typeof console.log
+Function
+

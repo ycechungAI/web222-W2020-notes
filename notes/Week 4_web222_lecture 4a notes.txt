@@ -1,0 +1,175 @@
+Week 4 - WEB222 - David H.
+=============================================================================
+Recall: 
+
+let today = new Date()
+today
+/Wed Jan 29 2020 13:33:47 GMT-0500 (Eastern Standard Time)
+// new date object - assign it today
+// new - constructor is a new instance of date object - specific to time
+
+let today = date()
+// function 
+
+//methods of date
+today.getTime()
+today.getFullYear()
+
+Date.now() -> Jan 1, 1970 -> miliseconds (always get it)
+---------------------------------------------------
+Math.PI
+
+Math.cos()
+Math.random()
+...etc
+
+---------------------------------------------------
+-Array
+   -Collection of objects
+   -order by index - Number
+         (Number, Position)
+		 e.g. List[3]
+-Object
+   -References of objects
+   -collection of - properties
+                  - methods
+		key, value (Objects - nested e.g. arrays
+		            functions
+			can be	String literal, number literal, null, undefined, boolean -> anything in the value
+		Key - String
+			- unique
+	Key value pair
+	
+Order and indexed by the key
+
+Hash, Hash Map, 
+Dictionary - key space is defined A-Z
+
+---------------------------------------------------
+O['key name']
+//get value that is at key
+O.key_name
+//2nd way of doing it
+
+Math.PI
+Math['PI']
+
+------------------------------------
+let literal = `${value} middle of my string`
+              " "
+			  ' '
+			  
+			bool
+			[1000] - one item
+			[1000, 2000] - two items in it
+let literal = /something in here/ - regular expression
+OR
+let literal = new RegExp()
+
+//function literal
+let literal = function() { ... }
+---------------------------------------
+let literal = {} //defines an empty object
+OR
+let literal = new Object{}
+
+let obj = { name: "WEB222" } // array will look like [0: "WEB222"]
+let obj2 = { course: "WEB222", section: "NII" } //object obj2 - 2 properties of sting values
+
+obj2.section
+obj2.students
+
+if(obj2.course) { console.log('course is defined on obj2' } //truthy
+
+obj.studentCount = 37
+obj
+
+----------------------------------------statically defined
+set value to null
+
+Get rid of key
+delete obj.studentCount
+
+
+obj.toString = function({ console.log(this.course) }
+
+obj.toString() // key (functions are objects) function object prints - reference to key name, call it through name of key
+-> this specific instance - 
+
+
+- go back to parent scope - closure -> memory leak 
+
+VERSION 1
+let lat = 43.7714;
+let lng = -79.498;
+
+// but they are a pair - remember chagne one or change another
+
+VERSION 2
+let pos[43.7714, -79.4988] 
+//which one is lat which one is lng
+
+VERSION 3
+let position = {
+	coord: {
+		lat:43.7714,
+		lng:-79.4988
+	};
+	altitude: 1000
+	
+};
+
+
+*Property Bag
+-collection of data - keyed on the name
+//function - 
+
+let coord = position.coord; //reference -
+coord.toArray = function(){ return [ this.lat, this.lng ]; };
+
+or
+
+position.coord.toArray = function(){ return [ this.lat, this.lng ]; };
+
+position.coord.toArray = function
+
+return [
+	this.coord.lat
+	this.coord.lng
+	];
+};
+
+//who owns the function
+
+
+
+Generate data -> https://mockaroo.com/
+
+let courses = [ { name:'WEB222', term:'Winter', year: 2020 },{ name:'OOP244', term:'Winter', year: 2020 };
+
+course.push({name:'DCF255', term:'Winter'})
+
+courses[2].year = 2020
+
+let user0 = allUsers[0].
+user0.fullName = `${user0.firstName} ${user0.lastName}`;
+
+allUsers.forEach(function(user) {
+	user.fullNmae = user.firstName + ' ' + user.lastName;
+	//console.log(user);
+})
+
+
+
+Convart [user, user, user ]
+
+{
+	build database - referenced by key
+}
+//=================================================
+let userDatabase = {};
+
+allUsers.forEach(function(user){
+	userDatabase[user.id] = user;
+})
+//organized into dictionary - 
