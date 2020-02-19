@@ -134,3 +134,46 @@ document.links[document.links.length - 1]
  
  
  document.querySelectorAll('h1')[0].innerHTML = "I changed this."
+ 
+ 
+ 
+ let elemW = document.querySelector('#Welcome')
+ 
+ let newP = document.createElement('p')
+ newP.innerHTML = 'This is some text';
+ 
+ elemW.appendChild(newP);
+ 
+ 
+ let a = doument.createElement('a')
+ a.href = "htps://www.google.ca";
+ a.innerHTML = "Google"
+ 
+ a
+ 
+ document.body.appendChild(a);
+ 
+ 
+ 
+ .insertBefore
+ 
+ 
+ 
+ wikipedia
+ Horse
+ 
+ 
+ /////////////////////////////////////////////////
+ let images = document.querySelectorAll('img')
+undefined
+images = Array.from(images);
+(38) [img, img, img, img, img.playerPoster, img, img.thumbimage, img.thumbimage, img.thumbimage, img.thumbimage, img.thumbimage, img.thumbimage, img, img, img, img, img, img.thumbimage, img.thumbimage, img.thumbimage, img.thumbimage, img.thumbimage, img.thumbimage, img, img, img.thumbimage, img.thumbimage, img.thumbimage, img.noviewer, img, img.noviewer, img, img, img, img, img, img, img]
+let urls = images.map(function(img){ return img.src; })
+/////////////////////////////////////////////////
+
+urls.filter(function(url){ return url.endsWith('.png'); }
+
+
+
+
+Array.from(document.querySelector('a')).map(a => a.href).filter(url => url.startsWith('https://'))
