@@ -1,0 +1,136 @@
+static HTML Documents
+Dynamic
+
+Application vs Documents
+
+<!DOCTYPE html>
+
+parser - html v4, html v5, xml
+parser produces a tree
+
+html (root) -> head -> title
+                    -> meta
+            -> body -> h1
+	                -> p -> a
+			        -> ul -> li
+					      -> li
+						  -> li
+			
+Review
+==========================================			
+			 p - block has its own space
+			 a - inline
+			 <a> tag
+			 <a> asfsd </a> is element
+			 p-> This is a text node
+			  -> a - link element contained with (anchor)
+			  -> in it.
+			 
+DOM tree - data structure child parent 
+
+array is collect
+
+Collect all together - Graph
+
+Node - part of the tree structure
+Leaf node is at the end of the branch
+
+
+root node -> node
+          -> node
+		  -> node -> leaf node
+		  
+Dynamic webpages
+===========================================
+html, your email and my email, change tree (your email, my email)
+
+
+change in memory
+in memory representation -> modify in memory
+
+
+
+locked on current dom
+
+window - reference {parent:Window
+
+window.document - programming handle
+
+global scope
+-> get element - both node is part of DOM also nodedo
+
+
+
+Array.from(document.images) in the body
+
+
+document.images[0].src
+
+
+documents.link
+- anchors
+
+a
+a.x - x is a class name (family)
+
+//get last link
+document.links[document.links.length - 1]
+
+
+1. document.querySelector
+
+1a. tag name
+    e.g. document.querySelector('p')
+	                           ('li')
+							   All('li')
+1b. query by last name
+
+ <div class="topTabs bgBanner">
+ 
+ document.querySelectorAll('.topTabs');
+ 
+ 
+ document.querySelectorAll('.hideoff');
+ 
+ 
+ 
+ class many - 
+ 
+ id has to be unique in the page
+ 
+ #id
+ document.querySelector('#appTabList');
+ 
+ 
+ document.querySelector('#Welcome');
+ 
+ 
+ let welcome = document.querySelector('#Welcome')
+ 
+ welcome.querySelectorAll('span');
+ 
+ welcome.querySelector('span');//find me the vary first span element
+ 
+ let span = welcome.querySelector('span') //reference to span
+ span.innerHTML 
+ 
+ /////Welcome
+ 
+ span.innnerHTML = "Goodbyte"
+ 
+ let firstPic = document.querySelectorAll('.cn-pic')[0]
+ firstPic = firstPic.querySelector('img');
+ 
+ let tmp = firstPic.src;
+ 
+ let secondPic = document.querySelectorAll('.cn-pic')[1]
+ secondPic = secondPic.querySelector('img);
+ firstPic.src = secondPic.src
+ secondPic.src = tmp;
+ 
+ 
+ 
+ node or document
+ 
+ 
+ document.querySelectorAll('h1')[0].innerHTML = "I changed this."
