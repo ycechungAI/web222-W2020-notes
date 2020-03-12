@@ -1,0 +1,223 @@
+Friday - Quiz March 6th, 2020
+=====================================================
+From A3 - 
+catch all for iframe - chrome
+
+standard - two different browser engine
+
+cant cash in browser - page load faster
+
+estlint wont look html5, 
+put everything in js files from now on
+
+Review for Week 7
+=====================================================
+queryselector (
+.class - any element type
+#id - unqiue
+
+name of element
+"p"
+
+createElement (document.createElement)
+
+getElmentById
+
+document.body.html (side body)
+document.body.outer (+<body> </body>)
+document.innerText
+
+////////////////LINK FUNCTION EXAMPLE///////////////
+
+function link(url, text){
+	let a = document.createElement("a");
+	a.innerHTML = text;
+	a.href = url;
+	return a;
+}
+
+link('https://google.ca', 'Google')
+
+//In games its like offscreen buffering
+
+///////////////change items to ordered list//////////////////
+funciotn toList(...items){
+	let listElem = document.createElement('ol');
+	items.forEach(function(item){
+		let liElem = document.createELement('li');
+		listElem.appendChild(liElem);
+		liElem.innerHTML = item;
+	});
+	return listElem;
+}
+
+toList('one', 'two', 'three');
+
+document.body.appendChild(toList('one, 'two','three'));
+
+
+//////////////////TO DO ///////////////////////////////
+doing function for table
+
+
+
+//web - javascript - event driven programming
+- thread
+- browser is an infinite event loop
+   -> call functions in order
+   
+   -> 16ms for each function turn of cycle - 
+   ->sensors - network requests, geolocation position, light in room, sound, sensors accelerometer
+   
+   -> function lined up in a row - not related to each other
+
+		///example recursion
+		if(item.isDirectory) item.appendChild(toList(item.children))
+		
+<script.js>
+
+//     light switch -wire   - light
+window.onload = function(){ //event handler 
+	document.body.onclick = function(e){
+		console.log('click');
+	};		
+}
+//wait until window has onload
+//it will run the function
+
+//ANOTHER WAY TO WRITE IT//////////////////
+fucntion handleClick(){
+	console.log('handleClick called ' + Date.now);
+}
+function registerClickHandler(){
+	console.log('registerClickHandler called');
+	document.body,onclick = handleClick;
+}
+// Method 1: use on{event-name}
+window.onload = registerClickHandler; // this is not calling the function
+
+// Method 2: use addEventListener('event-name')
+window.addEventListener('load', registerClickHandler);
+window.addEventListener('load', registerClickHandler2);
+                     name of event
+					 
+//search mdn event names
+
+////////////////////////////////////////////////
+window.onload = function(){
+	let spanMouseX = document.querySelector('#mouse-x');
+	let spanMouseY = document.querySelector('#mouse-y');
+	document.body.addEventListener('mousemove', function(e){
+		console.log('mousemove', event.x, event.y);
+		
+		
+		
+		spanMouseX.innerText = x;
+		spanMouseY.innerText = y;
+	});
+};
+					 
+index.hmtl
+
+<p>(<span id="mouse-x"></span>, <span id="mouse-y"></span>)</p>
+<script src="script.js"></script>
+//placeholder
+
+
+//timing errors - script at end like window.onload so it is later
+
+
+document.body.removeEventListener('mousemove', handleMouseMove);
+document.onload = null
+
+
+/////////VERSION 2 //////////UP TIME
+
+<p>Seconds: <span id="seconds"></span></p>
+window.onload = function(){
+	let spanSeconds = document.getElementById('seconds');
+	let seconds = 0;
+	let interval = this.setInterval(function(){
+		spanSecond.innerHTML = seconds++;
+		if(seconds === 10){
+			clearInterval(interval); //stop it 
+		}
+	
+	}, 1000);
+	//1 minute in miliseconds so 1000 
+};
+
+///////////////////////////////////// setTImeout(showTime, 2000); //wait for 2 seconds
+	setTImeout(function() {
+		spanSeconds.innerHTML = seconds++;
+	}, 2000
+	
+	setInterval(showTime, 2000) //
+	
+	
+/////////////////////////////////////
+index.html
+	<button id="click-me">Click Me</button>
+	<video></video>
+
+	window.onload = function(){
+		let src = 'https://test.../'
+		let button = document.querySelector('#click-me');
+		button.addEventListener('click', function(){
+			//console.log('click'); //test 1
+			document.createElement('source');
+			//set its src to be our video URL
+			source.src = src;
+			// Grab the video element and add the source to it
+			let video = document.querySelector('video');
+			video.appendChild(source);
+			video.width = 800;
+			//video.setAttribute('width','800');
+			//Event Listener
+			//WHen something happens..do something - you register to be called in future
+			//video.onplay = function(){...}
+			//Method
+			video.play()
+		});
+	}
+	
+	///////////////////////////blur
+	
+	//video.onblur - not always use this but the following
+	
+	//use add event listener instead
+	video.addEventListener('blur', function(){
+		console.log('blur');
+		video.pause();
+	});
+	video.addEventListener('focus', function(){
+		console.log('focus');
+		video.play();
+	});
+	
+	///////////////////////////visibility change
+	document.addEventListener('visibilitychange', function(){
+		if(document.hidden){
+			console.log('pausing...');
+			document.title = 'paused';
+			video.pause();
+		}else{
+			//document.title = 'playing';
+			
+			
+			video.currentTime = 0;
+			video.play();
+		}
+	
+	}
+	//switch tabs
+	
+	//video.currentTime - 
+	//setInterval
+	
+	
+	setInterval(function(){
+		document.title = video.currentTime;
+	}, 1000);
+	
+	

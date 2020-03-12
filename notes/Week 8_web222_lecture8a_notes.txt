@@ -1,0 +1,174 @@
+Cascading Style Sheets (CSS)
+========================================================
+misunderstood technology
+1. <html> ... stream
+2. parse - DOM tree, structure
+3. loads external resource, like images, scripts (parsed and executed), make use of CSS
+   - build a couple more trees
+   - Render Tree - similar but not identical to DOM tree
+   - e.g. DOM tree has <p> element and text
+   - in memory represnetation and draw it to the screen, 2D buffer
+4. CSS is rules language - render it in rules - define how it looks
+5. CSS programming language - Domain Specific Language - e.g. like a Regex, little languages
+6. declarative, state machine, programming language - end product -> matrix in which we apply the rendering process
+7. TODAY TAKE SYNTAX
+
+- id - 1 and only 1
+- class - infinite -> gives us context
+
+//ZENGARDEN - both id and class on anything
+<section class="intro" id="zen-intro"> //clickable deep link session
+//anchor goes to relative id -> tag, deep linking
+
+////////////////////////////////////
+<div class="summary"> - accessibility tree OLD SCHOOOL
+role="article"
+
+inside div, id
+
+
+
+Designer -> "Assets" - phones, icons, background images,
+
+unsplash - background images - > Creative Commons - open source for assets types
+illustration - 
+csszengarden.com/220/
+
+-coming -> web assembly
+////////////////////////////////////
+used to use html to do styling <font>, <b>, <i>
+
+1. css selector 
+- similar to query selector
+
+<selector> {
+	key : value  //declaration
+	key2 : value     //rule
+}
+
+h1{
+	color: blue;    //color of text to be blue
+	font-size: 12px;  // kaboob case '-', so font-size instead of fontSize
+	                  //font size to be 12 pixels
+}
+
+p {
+	color: red;
+	
+
+}
+- children inherit -> general place pssible - declared
+castecd
+
+address{
+	display: bocks
+	font-style: italic
+}
+
+block element gets its own space//
+/////////////////////////////////
+TEST in different browser -  
+
+4. first layer of css is the browser
+
+//do this so that style loads on load
+<head>
+   <link rel="stylesheet" href="https://stackpath.boostrapcdn.co/boostrap/4.1.3/css/bootsrap.min.css"
+   <link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+
+parallex - disappears and appears - animation
+
+////////////////////////////////////
+element.style{
+	display: none 
+}
+//invisible
+
+display menu
+display none
+
+css has no if statement, have to embedd in html and javascript
+
+html has external resources to link - style sheet
+
+rel - relationship
+
+tobiasahin.com/spinkit/
+
+css rules more rules than specific - target 
+
+
+style sheet font awesome -> css style sheet that gives you icons -> dark are free
+
+@import url(https://use.fontawesome.com/releases/v5.4.2/css/all.css)
+
+<link rel="stylesheet" href="url.." type="text/css">
+
+
+p {
+	text-indent: 20px;
+}
+
+<style>
+	.demo{
+		text-decoration: underline red;
+	}
+</style>
+
+1) .demo
+2) p.demo
+- more specific
+
+text-decoration: double underline red;
+
+
+
+///////////////////////////////////////
+class reusable - .invisible{
+						display: none
+				}
+inline element don't have size
+certain css declaration - css will ignore things that it does not understand
+
+
+<style>
+	.invisible{
+		display: none;
+	}
+	.example{
+		color:green;
+		background-color: red;
+	}
+</style>
+<p class="invisile example">
+
+
+#summary{
+	font-size: 16 px;
+}
+<div>
+	<p> </p>
+	<p> </p>
+</div>
+//CSS-TRICKS - ALMANAC
+
+//////////////////////////////
+div.a.b.c
+
+<div class="a b c">
+
+SUMMARY
+////////////////////////////
+.class 
+#id
+, is OR
+space -> child of 
+
+contextual selectors
+
+
+<div>
+<span>
+/////////////////////////////////////////////////
+NEXT CLASS - USE CSS AND MAKE WEBPAGES BEAUTIFUL
